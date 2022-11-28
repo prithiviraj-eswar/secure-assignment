@@ -1,0 +1,39 @@
+{% extends "dashlayouts.html"%}
+
+{% block content %}
+<div class="container">
+    <!-- {% include 'admin/navbar.html' %} -->
+    <div class="my-2">
+        <form action="" method="POST" style="width:100%">
+            <div class="d-flex align-items-center">
+                <input type="text" name="join_group" id="join_group" class="form-control my-1 w-50">
+                <button type="submit" class="btn btn-success " style="margin-left:10px;">Join Group</button>
+            </div>
+        </form>
+    </div>
+    <div class="my-2">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Grouo Name</th>
+                        <th>Group Description</th>
+                       
+                        <!-- <th>Email</th>
+                        <th>Edu</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for group in groups %}
+                    <tr>
+                        <td>{{group.groupname}}</td>
+                        <td>{{group.groupdescription}}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}

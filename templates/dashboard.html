@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <h1>Hello you are logged in.</h1><br>
+    <a href="{{url_for('createGroup')}}"> Create a Group</a><br>
+    <a href="{{url_for('fetchAllgroups')}}"> Fetch All Groups</a><br>
+    <a href="{{url_for('viewmygroups')}}"> View My Groups</a><br>
+    <a href="{{url_for('viewgroupusers')}}"> View Users in Each Group</a><br>
+    <a href="{{url_for('upload')}}"> Upload Files</a><br>
+    <a href="{{url_for('files')}}"> Download Files</a><br>
+    <a href="{{url_for('show')}}"> View Images</a><br>
+    <a href="{{url_for('logout')}}">Press here to logout</a><br>
+</body>
+
+</html>

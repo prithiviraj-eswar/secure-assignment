@@ -1,0 +1,39 @@
+{% extends "dashlayouts.html"%}
+
+{% block content %}
+<div class="container">
+    <!-- {% include 'admin/navbar.html' %} -->
+    <h2> My Groups are : </h2>
+    <div class="my-2">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Grouo Name</th>
+                       
+                        <!-- <th>Email</th>
+                        <th>Edu</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for group in groups %}
+                    <tr>
+                        <td>{{group.groupname}}</td>
+                        <!-- <td><a href="{{url_for('grpfunc')}}"> Open Group</a><br></td> -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="my-2">
+                <form action="/files" method="POST" style="width:100%">
+                    {{ form.groupname }}
+                    <div class="d-flex align-items-center">
+                        <input type="text" name="open_group" id="open_group" class="form-control my-1 w-50">
+                        <button type="submit" class="btn btn-success " style="margin-left:10px;"> Open Group</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
